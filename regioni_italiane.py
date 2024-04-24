@@ -18,5 +18,9 @@ def info_json(regione):
   info = regioni_italiane[regioni_italiane.denominazione_regione == regione]
   return render template('table.html', tabella = info.to_json())
 
+@app.route('/info/<nome_regione>')
+def info(nome_regione):
+  
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
